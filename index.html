@@ -1,62 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GameStore</title>
 
-  <!-- PWA -->
-  <link rel="manifest" href="./js/manifest.json" />
-  <meta name="theme-color" content="#0f172a" />
-  <link rel="stylesheet" href="./css/mycss.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gaming Shop</title>
+
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0f172a">
+
+<link rel="stylesheet" href="/css/style.css">
+
 </head>
 
 <body>
-<button id="chatToggle">💬</button>
 
-<!-- Ventana chat -->
+<h1>Gaming Shop 🎮</h1>
+
+<button id="chatToggle">Chat</button>
+
 <div id="chatBox">
-  <div id="chatMessages"></div>
 
-  <div id="chatInputArea">
-    <input id="chatInput" placeholder="Pregúntame por ofertas o juegos..." />
-    <button onclick="sendMessage()">Enviar</button>
-  </div>
+<div id="chatMessages"></div>
+
+<input id="chatInput" placeholder="Pregunta por juegos...">
+
+<button onclick="sendMessage()">Enviar</button>
+
 </div>
-<header>
-  <h2>🎮 GameStoree</h2>
-</header>
 
-<div class="container">
-  <input type="text" placeholder="Buscar videojuegos..." />
-
-  <div class="grid">
-    <div class="card">
-      <img src="https://m.media-amazon.com/images/I/71GPiuyNtkL._AC_UF1000,1000_QL80_.jpg" width="100%" />
-      <p>Elden Ring</p>
-      <p class="price">$29.99</p>
-      <button class="buyBtn" data-name="Elden Ring" data-price="2999">
-      Comprar
-    </button>
-    </div>
-
-    <div class="card">
-      <img src="https://juegosdigitalesmexico.mx/files/images/productos/1730416859-cyberpunk-2077-ps4-0.webp" width="100%" />
-      <p>Cyberpunk 2077</p>
-      <p class="price">$19.99</p>
-      <button class="buyBtn" data-name="Elden Ring" data-price="2999">
-      Comprar
-    </button>
-    </div>
-  </div>
-</div>
+<script src="/js/chat.js"></script>
 
 <script>
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("./js/sw.js");
-  }
+
+if ("serviceWorker" in navigator) {
+ navigator.serviceWorker.register("/js/sw.js");
+}
+
 </script>
-<script src="./js/stripe.js"></script>
 
 </body>
 </html>

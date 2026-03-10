@@ -1,20 +1,30 @@
-const CACHE_NAME = "gamestore-v1";
+const CACHE_NAME = "gaming-shop-v1";
 
-self.addEventListener("install", event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll([
-        "/",
-        "/index2.html",
-        "/mycss.css",
-        "/stripe.js"
-      ]);
-    })
-  );
+const urlsToCache = [
+"/",
+"/index.html",
+"/css/style.css",
+"/js/chat.js"
+];
+
+self.addEventListener("install",event=>{
+
+event.waitUntil(
+
+caches.open(CACHE_NAME)
+.then(cache=>cache.addAll(urlsToCache))
+
+);
+
 });
 
-self.addEventListener("fetch", e => {
-  e.respondWith(
-    caches.match(e.request).then(res => res || fetch(e.request))
-  );
+self.addEventListener("fetch",event=>{
+
+event.respondWith(
+
+caches.match(event.request)
+.then(response=>response || fetch(event.request))
+
+);
+
 });
