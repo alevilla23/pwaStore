@@ -30,3 +30,52 @@ padding:8px;
 margin-top:5px;
 cursor:pointer;
 }
+
+header{
+  background:#020b1f;
+  padding:15px;
+  font-size:22px;
+  font-weight:bold;
+}
+
+.search-bar{
+  width:90%;
+  margin:20px auto;
+  display:block;
+  padding:10px;
+  border-radius:10px;
+  border:none;
+}
+
+.games-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, 180px);
+  gap:25px;
+  padding:20px;
+}
+
+.game-card{
+  background:#020b1f;
+  padding:15px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+.game-card img{
+  width:120px;
+  border-radius:6px;
+}
+
+.price{
+  color:#22c55e;
+  font-weight:bold;
+}
+
+button{
+  margin-top:10px;
+  padding:6px 12px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
