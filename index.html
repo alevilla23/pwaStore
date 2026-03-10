@@ -1,44 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Shop</title>
 
-<title>Gaming Shop</title>
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0f172a" />
 
-<link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#0f172a">
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
 
-<link rel="stylesheet" href="/css/style.css">
+  <body>
+    <h1>Gaming Shop 🎮</h1>
+    <div class="games-container">
+      <div class="game-card">
+        <img src="img/elden-ring.jpg" />
+        <h3>Elden Ring</h3>
+        <p class="price">$29.99</p>
+        <button>Comprar</button>
+      </div>
 
-</head>
+      <div class="game-card">
+        <img src="img/cyberpunk.jpg" />
+        <h3>Cyberpunk 2077</h3>
+        <p class="price">$19.99</p>
+        <button>Comprar</button>
+      </div>
+    </div>
+    <button id="chatToggle">Chat</button>
 
-<body>
+    <div id="chatBox">
+      <div id="chatMessages"></div>
 
-<h1>Gaming Shop 🎮</h1>
+      <input id="chatInput" placeholder="Pregunta por juegos..." />
 
-<button id="chatToggle">Chat</button>
+      <button onclick="sendMessage()">Enviar</button>
+    </div>
 
-<div id="chatBox">
+    <script src="/js/chat.js"></script>
 
-<div id="chatMessages"></div>
-
-<input id="chatInput" placeholder="Pregunta por juegos...">
-
-<button onclick="sendMessage()">Enviar</button>
-
-</div>
-
-<script src="/js/chat.js"></script>
-
-<script>
-
-if ("serviceWorker" in navigator) {
- navigator.serviceWorker.register("/js/sw.js");
-}
-
-</script>
-
-</body>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/js/sw.js");
+      }
+    </script>
+  </body>
 </html>
