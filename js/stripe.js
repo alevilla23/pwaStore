@@ -1,4 +1,4 @@
-const API_KEY = "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";
+const API_KEY = "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";
 const MODEL = "liquid/lfm-2.5-1.2b-thinking:free";
 
 const chatToggle = document.getElementById("chatToggle");
