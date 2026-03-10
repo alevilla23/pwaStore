@@ -6,9 +6,9 @@
   <title>GameStore</title>
 
   <!-- PWA -->
-  <link rel="manifest" href="/manifest.json" />
+  <link rel="manifest" href="./js/manifest.json" />
   <meta name="theme-color" content="#0f172a" />
-  <link rel="stylesheet" href="mycss.css">
+  <link rel="stylesheet" href="./css/mycss.css">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
   </div>
 </div>
 <header>
-  <h2>🎮 GameStore</h2>
+  <h2>🎮 GameStoree</h2>
 </header>
 
 <div class="container">
@@ -53,10 +53,10 @@
 
 <script>
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("/sw.js");
+    navigator.serviceWorker.register("./js/sw.js");
   }
 </script>
-<script src="stripe.js"></script>
+<script src="./js/stripe.js"></script>
 
 </body>
 </html>
